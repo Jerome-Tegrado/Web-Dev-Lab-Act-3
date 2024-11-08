@@ -28,7 +28,8 @@ Welcome to Jerome's Blog, a personal space where I share my thoughts, projects, 
 To view the blog:
 
 1. Clone the repository or download the HTML file.
-2. Open the `index.html` file in your web browser.
+2. Download the images folder to see the visuals used in the blog.
+3. Open the `index.html` file in your web browser.
 
 ## Customization
 
