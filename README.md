@@ -1,6 +1,6 @@
 # Jerome's Blog
 
-Welcome to Jerome's Blog, a personal space where I share my thoughts, projects, and experiences as a third-year Information Systems student at the Technological University of the Philippines. This blog showcases my journey in technology, data analysis, and creative design.
+Welcome to Jerome's Blog, a personal space where I share my thoughts, projects, and experiences as a third-year Information Systems student at the Technological University of the Philippines. This blog showcases information about my education, experiences, activities, hobbies, and contact information.
 
 ## Features
 
