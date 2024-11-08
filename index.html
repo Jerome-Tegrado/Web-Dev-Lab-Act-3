@@ -10,37 +10,57 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* 
+        Used Selectors in CSS:
+        - Universal Selector (*) - Used to apply global styles
+        - Type Selector (element) - Used in body, h1, h3, section, .sidebar img, .content h1, .content h3, .sidebar h2, .content p, .content ul
+        - Class Selector (.classname) - Used in .navbar, .navbar-brand, .navbar-brand i, .nav-link, .sidebar, .social-icons a, .content, .post-card, .contact-icons i, .footer
+        - ID Selector (#idname) - Used as an example (#exampleID)
+        - Attribute Selector ([attribute]) - Used as an example ([data-example])
+        - Descendant Selector (ancestor descendant) - Used in .navbar .navbar-brand, .navbar .nav-link, .sidebar img, .content h3 i
+        - Child Selector (parent > child) - Used in .sidebar > h2
+        - Adjacent Sibling Selector (element1 + element2) - Used in .content h3 + p
+        - General Sibling Selector (element1 ~ element2) - Used in .content h1 ~ .content p
+        - Pseudo-class Selector (:pseudo-class) - Used in section:target, .social-icons a:hover, .navbar .nav-link:hover, .footer a:hover
+        - Pseudo-element Selector (::pseudo-element) - Used in ::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb
+        */
+        
+        /* Universal Selector */
+        * {
+            box-sizing: border-box; /* Apply box-sizing to all elements */
+        }
+        
         /* General Styling */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; /* Type Selector */
             background-color: #f0f0f0;
             color: #333;
             overflow-x: hidden;
         }
         h1, h3 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; /* Type Selector */
         }
-
+        
         /* Navbar */
         .navbar {
-            background-color: #006400;
+            background-color: #006400; /* Class Selector */
         }
         .navbar .navbar-brand {
             font-weight: bold;
             color: #fff;
             display: flex;
-            align-items: center;
+            align-items: center; /* Descendant Selector */
         }
         .navbar .navbar-brand i {
             color: #9acd32;
             margin-right: 8px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; /* Descendant Selector */
         }
         .navbar .navbar-brand:hover i {
             transform: scale(1.1); /* Scale effect on leaf icon */
         }
         .navbar .nav-link {
-            color: #fff !important;
+            color: #fff !important; /* Class Selector */
             font-weight: normal;
             transition: color 0.3s ease, border-bottom 0.3s ease;
             padding-bottom: 2px;
@@ -61,27 +81,27 @@
         .navbar .nav-link.active {
             color: #9acd32 !important;
             font-weight: bold;
-            border-bottom: 2px solid #9acd32;
+            border-bottom: 2px solid #9acd32; /* Class Selector */
         }
-
+        
         /* Scroll Padding for accurate section scroll */
         section {
-            scroll-margin-top: 80px;
+            scroll-margin-top: 80px; /* Type Selector */
             transition: transform 0.3s ease, background-color 0.3s ease;
             padding: 20px;
             border-radius: 10px;
         }
-
+        
         /* Scaling effect on target section */
         section:target {
-            transform: scale(1.02);
+            transform: scale(1.02); /* Pseudo-class Selector */
             background-color: #eaf7ec;
             box-shadow: 0px 4px 20px rgba(0, 100, 0, 0.2);
         }
-
+        
         /* Sidebar Profile */
         .sidebar {
-            background-color: #e0f7e9;
+            background-color: #e0f7e9; /* Class Selector */
             padding: 30px;
             position: fixed;
             width: 300px;
@@ -94,16 +114,16 @@
             z-index: 1;
         }
         .sidebar img {
-            width: 100px;
+            width: 100px; /* Type Selector */
             border-radius: 50%;
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; /* Type Selector */
         }
         .sidebar img:hover {
             transform: scale(1.05); /* Scale effect on profile image */
         }
         .sidebar h2 {
-            font-size: 2rem;
+            font-size: 2rem; /* Type Selector */
             text-align: center;
             font-weight: bold;
         }
@@ -112,144 +132,201 @@
             color: #555;
             margin-bottom: 20px;
         }
-
+        
         /* Social Media Icons Hover */
         .social-icons a {
-            color: #006400;
+            color: #006400; /* Class Selector */
             font-size: 1.5rem;
             text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
+            transition: transform 0.3s ease, color 0.3s ease; /* Class Selector */
         }
         .social-icons a:hover {
-            color: #9acd32;
+            color: #9acd32; /* Light Green */
             transform: scale(1.1);
         }
-
+        
         /* Main Content */
         .content {
-            margin-left: 320px;
+            margin-left: 320px; /* Class Selector */
             padding: 50px;
         }
         .content h1, .content h3 {
-            color: #006400;
+            color: #006400; /* Class Selector */
         }
         .content h1 {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* Type Selector */
             font-weight: bold;
         }
         .content h3 {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Type Selector */
             font-weight: bold;
             margin-top: 30px;
         }
         .content h3 i {
-            color: #9acd32;
+            color: #9acd32; /* Class Selector */
             margin-right: 8px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; /* Type Selector */
         }
         .content h3 i:hover {
             transform: scale(1.1);
         }
         .content p, .content ul {
-            font-size: 1.1rem;
+            font-size: 1.1rem; /* Type Selector */
             color: #555;
             margin-bottom: 20px;
         }
         .content ul li {
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease; /* Class Selector */
         }
-        .content ul li:hover {
-            color: #9acd32;
-            transform: scale(1.05);
+        .content ul li:hover, .post-card h3:hover {
+            color: #9acd32; /* Light green color */
         }
-
+        
         /* Contact Icons Hover */
         .contact-icons i {
-            color: #006400;
-            transition: color 0.3s ease, transform 0.3s ease;
+            color: #006400; /* Class Selector */
+            transition: color 0.3s ease, transform 0.3s ease; /* Class Selector */
         }
-        .contact-icons i:hover {
-            color: #9acd32;
-            transform: scale(1.1);
+        .contact-icons i:hover, .contact-icons a:hover {
+            color: #9acd32; /* Light green color */
         }
-
+        
         /* Blog Post Styling */
         .post-card {
-            background-color: #fff;
+            background-color: #fff; /* Class Selector */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; /* Class Selector */
         }
         .post-card:hover {
-            transform: scale(1.02);
+            transform: scale(1.02); /* Class Selector */
             box-shadow: 0px 6px 15px rgba(0, 100, 0, 0.2);
         }
         .post-card img {
-            width: 100%;
+            width: 100%; /* Type Selector */
             border-radius: 10px;
             margin-bottom: 15px;
         }
         .post-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Type Selector */
             font-weight: bold;
             color: #333;
             margin: 10px 0;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease; /* Class Selector */
         }
         .post-card h3:hover {
-            color: #9acd32;
+            color: #9acd32; /* Light Green */
         }
-
+        
+        /* Example for ID Selector */
+        #exampleID {
+            background-color: #ffeb3b; /* ID Selector */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        /* Example for Attribute Selector */
+        [data-example] {
+            color: #d50000; /* Attribute Selector */
+        }
+        
+        /* Child Selector Example */
+        .sidebar > h2 {
+            margin-bottom: 20px; /* Child Selector */
+        }
+        
+        /* Adjacent Sibling Selector Example */
+        .content h3 + p {
+            margin-top: 10px; /* Adjacent Sibling Selector */
+        }
+        
+        /* General Sibling Selector Example */
+        .content h1 ~ .content p {
+            font-style: italic; /* General Sibling Selector */
+        }
+        
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 10px; /* Pseudo-element Selector */
         }
         ::-webkit-scrollbar-track {
-            background: #e0f7e9;
+            background: #e0f7e9; /* Pseudo-element Selector */
         }
         ::-webkit-scrollbar-thumb {
-            background-color: #006400;
+            background-color: #006400; /* Pseudo-element Selector */
             border-radius: 5px;
-            border: 2px solid #e0f7e9;
+            border: 2px solid #e0f7e9; /* Pseudo-element Selector */
         }
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #9acd32;
+            background-color: #9acd32; /* Pseudo-element Selector */
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
-                position: relative;
+                position: relative; /* Class Selector */
                 width: 100%;
                 height: auto;
                 padding: 20px;
                 box-shadow: none;
             }
             .content {
-                margin-left: 0;
+                margin-left: 0; /* Class Selector */
                 padding: 20px;
             }
             .sidebar h2 {
-                font-size: 1.8rem;
+                font-size: 1.8rem; /* Type Selector */
             }
             .sidebar img {
-                width: 80px;
+                width: 80px; /* Type Selector */
             }
             .content h1 {
-                font-size: 2rem;
+                font-size: 2rem; /* Type Selector */
             }
             .content h3 {
-                font-size: 1.3rem;
+                font-size: 1.3rem; /* Type Selector */
             }
             .content p, .content ul {
-                font-size: 1rem;
+                font-size: 1rem; /* Type Selector */
             }
         }
-    </style>
+
+                .footer {
+            background-color: #006400; /* Dark green background */
+            color: #fff; /* White text color */
+            text-align: center; /* Centered text */
+            padding: 20px; /* Padding around the footer */
+            position: relative; /* Relative positioning */
+            bottom: 0; /* Position at the bottom */
+            width: 100%; /* Full width */
+            margin-top: 20px; /* Space above the footer */
+        }
+
+        .footer a {
+            color: #9acd32; /* Light green link color */
+            text-decoration: none; /* No underline on links */
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+
+        .footer a:hover {
+            color: #fff; /* Change link color to white on hover */
+        }
+
+        /* Responsive Design for Footer */
+        @media (max-width: 768px) {
+            .footer {
+                font-size: 0.9rem; /* Smaller font size for mobile */
+                padding: 10px; /* Reduced padding for mobile */
+            }
+        }
+
+        </style>
+        
+        
 </head>
 <body>
 
@@ -290,15 +367,15 @@
 
     <!-- Sidebar Profile -->
     <aside class="sidebar">
-        <img src="profile.jpg" alt="Profile Picture">
+        <img src="images/2x2 (1).jpg" alt="Profile Picture">
         <h2>Jerome Tegrado</h2>
         <p>Third-year Information Systems student at Technological University of the Philippines. Passionate about technology, data analysis, and creative design.</p>
         
         <!-- Social Media Icons -->
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/jerome.tegrado" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jayteggg/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jerome-tegrado/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </aside>
 
@@ -307,7 +384,10 @@
         <!-- About Me Section -->
         <section id="about">
             <h1><i class="fas fa-user"></i> About Me</h1>
-            <p>Hello! I'm Jerome, a dedicated Information Systems student eager to apply my knowledge in various fields. With a strong background in data analysis, creative design, and programming, I aim to contribute to innovative projects and continuously learn along the way.</p>
+            <p>Hello! I'm Jerome, a 20-year-old Information Systems student currently in my third year at the Technological University of the Philippines (TUP). With a strong foundation in data analysis, creative design, and programming, I'm eager to apply my skills across various fields and collaborate on innovative projects that create real-world impact.</p>
+
+            <p>I consider myself an ambivert—balancing social interactions with introspective moments—and my personality type is INFJ, often known for creativity, insight, and a commitment to meaningful work. There's so much more to know about me, from my academic journey to my personal interests and ambitions. Dive deeper into this blog to discover more about my projects, insights, and hobbies. I'm excited to share this journey with you!</p>
+            
         </section>
 
         <section id="education">
@@ -315,6 +395,8 @@
             <ul>
                 <li><strong>Technological University of the Philippines, Manila</strong> - BS Information Systems (2022 - Present)</li>
                 <li><strong>Parañaque Science High School</strong> (2020 - 2022)</li>
+                <li><strong>Nativity Integrated School </strong> (2019 - 2020)</li>
+                <li><strong>Olivarez College of Parañaque</strong> (2016-2019)</li>
             </ul>
         </section>
 
@@ -332,26 +414,43 @@
         <section id="posts">
             <h1 class="mt-5"><i class="fas fa-book-open"></i> Recent Posts</h1>
             <div class="post-card">
-                <img src="post1.jpg" alt="Post Thumbnail">
-                <div class="date">Published on January 20, 2024</div>
-                <h3>Exploring Cybersecurity in 2024</h3>
-                <p>A dive into how AI and cybersecurity trends are evolving, and what it means for the future of information security...</p>
+                <img src="images/dssep.PNG" alt="Post Thumbnail">
+                <div class="date">Published on Nov. 3, 2024</div>
+                <h3>Accomplished DSS Enterprise Profile</h3>
+                <p>A detailed exploration into profiling enterprises using Decision Support Systems, highlighting how tailored solutions can enhance organizational strategy and decision-making.</p>
             </div>
+            
             <div class="post-card">
-                <img src="post2.jpg" alt="Post Thumbnail">
-                <div class="date">Published on January 5, 2024</div>
-                <h3>Building a Full-Stack University Admin System</h3>
-                <p>An overview of my experience developing a full-stack application for managing university administration processes...</p>
+                <img src="images/understanding.PNG" alt="Post Thumbnail">
+                <div class="date">Published on Oct. 26, 2024</div>
+                <h3>Accomplished Understanding the Organization (IT Audit)</h3>
+                <p>Insights into conducting an IT audit, focusing on the critical aspects of organizational infrastructure, security, and policies to strengthen operations.</p>
             </div>
+            
+            <div class="post-card">
+                <img src="images/milestone.PNG" alt="Post Thumbnail">
+                <div class="date">Published on Oct. 23, 2024</div>
+                <h3>Accomplished Milestone 1</h3>
+                <p>An overview of achieving the first major milestone in our project, covering project planning, key challenges, and early accomplishments in setting up the foundation for success.</p>
+            </div>
+            
+            <div class="post-card">
+                <img src="images/labact2.PNG" alt="Post Thumbnail">
+                <div class="date">Published on Oct. 23, 2024</div>
+                <h3>Accomplished Web Dev Lab Act 2</h3>
+                <p>A reflection on Web Development Lab Activity 2, where I applied lessons in HTML and ensured code quality by validating through W3C standards, reinforcing best practices in web development.</p>
+            </div>
+            
         </section>
 
         <!-- Activities Section -->
         <section id="activities">
             <h3><i class="fas fa-running"></i> Activities</h3>
             <ul>
-                <li>Volunteering at local community events</li>
-                <li>Participating in tech workshops and hackathons</li>
-                <li>Mentoring high school students in basic programming</li>
+                <li>Professional Works</li>
+                <li>School Works</li>
+                <li>Group works</li>
+                <li>Girlfriend Time</li>
             </ul>
         </section>
 
@@ -359,9 +458,11 @@
         <section id="hobbies">
             <h3><i class="fas fa-guitar"></i> Hobbies</h3>
             <ul>
-                <li>Photography: Capturing landscapes and urban life</li>
-                <li>Gaming: Enjoying strategy-based video games</li>
-                <li>Music: Playing guitar and exploring new genres</li>
+                <li>Eating</li>
+                <li>Gaming</li>
+                <li>Music</li>
+                <li>Chatting with friends</li>
+                <li>Discovering new ideas</li>
             </ul>
         </section>
 
@@ -369,12 +470,17 @@
         <section id="contact">
             <h3><i class="fas fa-envelope"></i> Contact</h3>
             <p class="contact-icons">
-                <i class="fab fa-linkedin"></i> <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
-                <i class="fab fa-github"></i> <a href="https://github.com" target="_blank">GitHub</a><br>
+                <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jerome-tegrado/" target="_blank">LinkedIn</a><br>
+                <i class="fab fa-github"></i> <a href="https://github.com/Jerome-Tegrado" target="_blank">GitHub</a><br>
                 <i class="fas fa-envelope"></i> <a href="mailto:tegradojerome@gmail.com">Email</a>
             </p>
         </section>
     </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <p>© 2024 Jerome Brent A. Tegrado, All Rights Reserved. | <a href="#about">Back to top</a></p>
+    </footer>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
