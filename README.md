@@ -32,8 +32,6 @@ To view the blog and ensure you have all the necessary assets, follow these step
    - Click on the green **Code** button near the top right.
    - Select **Download ZIP**. This will download the entire repository, including the crucial images folder.
 
-   ![Download ZIP](https://user-images.githubusercontent.com/65411194/163613043-b83e8b80-1c62-4118-80ec-9cc2c0f39b99.png)
-
 2. **Extract the ZIP File**:
    - Locate the downloaded ZIP file on your computer (usually in the Downloads folder).
    - Right-click on the ZIP file and select **Extract All** (or use a file extraction program to unzip it).
